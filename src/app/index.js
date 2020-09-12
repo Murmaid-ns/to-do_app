@@ -51,3 +51,5 @@ delButton.addEventListener('click', () => {
     el.parentNode.removeChild(el);
   });
 });
+
+console.log(delButton);
