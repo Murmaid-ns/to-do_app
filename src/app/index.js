@@ -92,3 +92,17 @@ accumulator.mul(10);
 console.log(accumulator.result);// 9
 accumulator.reset();
 console.log(accumulator.result); // 0
+
+fetch('http://api.giphy.com/v1/gifs/trending?api_key=0zRG8OoWXqE5oL5Dt9nqeOk06wBeTGCM&limit=10').then(res => {
+    res.json().then((data)=>{
+        data.data.forEach((el) => {
+           const elUrl = el.images.original.url;
+           const img = document.createElement('img');
+           const divGif = document.querySelector('.gify');
+           img.src = elUrl;
+           img.classList.add('gifs')
+            console.dir(img);
+            divGif.append(img);
+        })
+    })
+})

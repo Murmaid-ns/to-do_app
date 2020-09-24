@@ -1,15 +1,17 @@
 body {
+  display: flex;
+  flex-direction: column;
+
   background-color: whitesmoke;
 }
 
 #form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  //align-items: center;
 }
 
 #input {
-  flex-grow: 3;
+  //flex-grow: 3;
 }
 
 #add-button, #del-button, #del-selected-button {
@@ -19,4 +21,13 @@ body {
 
 .selected {
   color: darkgrey;
+}
+.gify{
+  display: flex;
+  flex-wrap: wrap;
+}
+.gifs{
+  align-self: center;
+  height: 300px;
+  width: 300px;
 }
